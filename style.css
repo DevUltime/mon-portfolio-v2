@@ -8,7 +8,7 @@
 :root {
   /*couleurs principales*/
   --color-blue-400: #24388d;
-  --color-blue-50: rgb(68, 93, 167);
+  --color-blue-50: #445da7;
   --color-blue-800: #0a0f28;
 
   /*couleurs secondaires*/
@@ -28,7 +28,7 @@
 
   /*polices et taille de la police*/
   --font-family: "Poppins", "Roboto", sans-serif;
-  --font-size-xs: clamp(0.7rem, 1vh + 1rem, 1.3rem);
+  --font-size-xs: clamp(0.3rem, 1vh + .3rem, 1rem);
   --font-size-md: clamp(1rem, 2vw + 1rem, 2rem);
   --font-size-lg: clamp(3rem, 10vw + 2rem, 5rem);
   --text-size: 0.8rem;
@@ -124,10 +124,18 @@ main{
   display: none;
 }
 .homepage__title{
-  color: var(--color-text-inverse);
+  letter-spacing: -10px;
+  background-image: linear-gradient(to right,var(--color-blue-800) ,var(--color-blue-400)20%,var(--color-blue-50));
+  background-clip: text;
+  color: transparent;
   text-transform: capitalize;
   font-size: var(--font-size-lg);
   line-height: .9;
+}
+.homepage__card{
+  display: flex;
+  flex-direction: column;
+
 }
 .homepage__stats{
   flex-wrap: nowrap;
@@ -137,6 +145,10 @@ main{
   background: color-mix(in srgb, var(--color-blue-50) 10%, transparent);
   display: flex;
   gap: var(--space-3);
+  font-size: var(--font-size-xs);
+}
+.homepage__stats div span{
+  color: var(--color-text-inverse);
 }
 .homepage__stats div{
   display: flex;
