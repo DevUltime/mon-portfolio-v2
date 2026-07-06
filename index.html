@@ -73,5 +73,19 @@
     </main>
 
     <footer></footer>
+
+
+
+    <script>
+      let menuHamburger = document.querySelector(".menu-hamburger"),
+      fstBar = document.querySelector(".fst-bar"),
+      lstBar = document.querySelector(".lst-bar"),
+      active = document.querySelector(".nav-bar");
+      menuHamburger.addEventListener("click", ()=>{
+        fstBar.classList.toggle("fstBar");
+        lstBar.classList.toggle("lstBar");
+        active.classList.toggle("active");
+      })
+    </script>
   </body>
 </html>

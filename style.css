@@ -80,10 +80,54 @@ header{
 }
 .nav-bar{
   display: none;
+  z-index: 100;
+  backdrop-filter: blur(50px);
+  top: 0;
+  left: 0;
+  position: fixed;
+  min-height: 90vh;
+  width: 100%;
+  background-color: color-mix(in srgb, var(--color-blue-50) 30%, transparent);
+  animation: fade .2s ease-out;
+}
+/*affichage de la nav-bar et animation*/
+@keyframes fade{
+  0%{
+    translate: 0 -90vh;
+  }
+  100%{
+    translate: 0 0;
+  }
+}
+.active{
+  display: flex;
+}
+
+.nav-bar ul{
+  padding: var(--space-10) 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: fade .3s ease-out;
+}
+.nav-bar ul li{
+  list-style: none;
+  border-bottom: var(--border-default);
+  padding: var(--space-4);
+}
+
+.nav-bar ul li a{
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color .2s ease-out;
+}
+.nav-bar ul li a:hover{
+  color: var(--color-text-inverse);
 }
 .menu-hamburger{
+  z-index: 101;
   right: var(--space-2);
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -92,12 +136,25 @@ header{
   width: 18px;
   height: 2px;
   background-color: var(--color-gris-50);
+  transform: translateY(0);
+  transition: transform .2s linear;
 }
 .lst-bar{
   width: 18px;
   height: 2px;
   background-color: var(--color-gris-50);
   box-shadow: 0 6px var(--color-gris-50);
+  transform: translateY(0);
+  transition: transform  .2s linear,
+  box-shadow  0.01s linear;
+}
+/*animation du menu hamburger*/
+.fstBar{
+  transform: rotate(-45deg) translateY(4px);
+}
+.lstBar{
+  transform: rotate(45deg) translateY(-4px);
+  box-shadow: none;
 }
 .logo{
   height: var(--space-4);
@@ -135,9 +192,11 @@ main{
 .homepage__card{
   display: flex;
   flex-direction: column;
+  gap: var(--space-2);
 
 }
 .homepage__stats{
+  z-index: -1;
   flex-wrap: nowrap;
   padding: var(--space-1) var(--space-3);
   border-radius: var(--border-radius-lg);
@@ -149,6 +208,9 @@ main{
 }
 .homepage__stats div span{
   color: var(--color-text-inverse);
+}
+.homepage__stats div p{
+  text-transform: capitalize;
 }
 .homepage__stats div{
   display: flex;
