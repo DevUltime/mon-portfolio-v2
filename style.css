@@ -230,6 +230,7 @@ main {
   flex-direction: column;
   gap: var(--space-3);
   padding: var(--space-2);
+  width: 100%;
 }
 .my-projects__group {
   display: flex;
