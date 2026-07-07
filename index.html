@@ -70,22 +70,46 @@
           </div>
         </div>
       </section>
+      <section class="my-projects">
+        <h2 class="my-projects__title">Mes projets</h2>
+        <div class="my-projects__group">
+          <div class="my-projects__card my-projects__card--elt1">
+            <div class="card__image">
+              <img src="pageTalentHub.jpeg" alt="image site web talenthub" />
+            </div>
+            <h3 class="card__title">Site web TalentHub</h3>
+            <a class="card__action" href="#">voir le projet <span class="material-symbols-outlined">east</span></a>
+          </div>
+          <div class="my-projects__card my-projects__card--elt2">
+            <div class="card__image">
+              <img src="imageCalculIMC.jpeg" alt="image application calcul IMC" />
+            </div>
+            <h3 class="card__title">Application calcul IMC</h3>
+            <a class="card__action" href="#">voir le projet <span class="material-symbols-outlined">east</span></a>
+          </div>
+          <div class="my-projects__card my-projects__card--elt3">
+            <div class="card__image">
+              <img src="logo_talenthub.svg" alt="logo de TalentHub" />
+            </div>
+            <h3 class="card__title">Logo site TalentHub</h3>
+            <a class="card__action" href="#">voir le projet <span class="material-symbols-outlined">east</span></a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer></footer>
 
-
-
     <script>
       let menuHamburger = document.querySelector(".menu-hamburger"),
-      fstBar = document.querySelector(".fst-bar"),
-      lstBar = document.querySelector(".lst-bar"),
-      active = document.querySelector(".nav-bar");
-      menuHamburger.addEventListener("click", ()=>{
+        fstBar = document.querySelector(".fst-bar"),
+        lstBar = document.querySelector(".lst-bar"),
+        active = document.querySelector(".nav-bar");
+      menuHamburger.addEventListener("click", () => {
         fstBar.classList.toggle("fstBar");
         lstBar.classList.toggle("lstBar");
         active.classList.toggle("active");
-      })
+      });
     </script>
   </body>
 </html>
