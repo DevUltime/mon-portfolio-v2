@@ -28,7 +28,7 @@
 
   /*polices et taille de la police*/
   --font-family: "Poppins", "Roboto", sans-serif;
-  --font-size-xs: clamp(0.3rem, 1vh + 0.5rem, 1rem);
+  --font-size-xs: clamp(0.7rem, 1vh + 0.2rem, 1rem);
   --font-size-md: clamp(1rem, 2vw + 1rem, 2rem);
   --font-size-lg: clamp(3rem, 10vw + 2rem, 5rem);
   --text-size: 0.8rem;
@@ -61,6 +61,7 @@ body {
     "header"
     "main"
     "footer";
+    overflow-x: hidden;
 }
 
 header {
@@ -74,12 +75,12 @@ header {
   display: flex;
   grid-area: "header";
   justify-content: space-between;
-  backdrop-filter: blur(50px);
+  background-color: var(--bg-color);
 }
 .nav-bar {
   display: none;
   z-index: 100;
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(30px);
   top: 0;
   left: 0;
   position: fixed;
@@ -175,6 +176,11 @@ main {
   align-items: center;
   padding: 0 var(--space-3);
   min-height: calc(100vh - var(--space-8));
+  background-image: linear-gradient(360deg,var(--bg-color), color-mix(in srgb, var(--bg-color) 90%, transparent)),
+  url(jdev.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
 }
 .homepage__image {
   display: none;
@@ -184,7 +190,7 @@ main {
   background-image: linear-gradient(
     to right,
     var(--color-blue-800),
-    var(--color-blue-400) 20%,
+    var(--color-blue-400) 30%,
     var(--color-blue-50)
   );
   background-clip: text;
@@ -199,11 +205,9 @@ main {
   gap: var(--space-2);
 }
 .homepage__stats {
-  z-index: -1;
   flex-wrap: nowrap;
   padding: var(--space-1) var(--space-3);
   border-radius: var(--border-radius-lg);
-  backdrop-filter: blur(50px);
   background: color-mix(in srgb, var(--color-blue-50) 10%, transparent);
   display: flex;
   gap: var(--space-3);
@@ -213,6 +217,7 @@ main {
   color: var(--color-text-inverse);
 }
 .homepage__stats div p {
+  font-size: var(--font-size-xs);
   text-transform: capitalize;
 }
 .homepage__stats div {
@@ -256,8 +261,10 @@ main {
 .card__image{
   height: 200px;
   width: 100%;
+  border-radius: var(--border-radius-xs);
 }
 .card__image img{
+  border-radius: var(--border-radius-xs);
   height: 100%;
   width: 100%;
   object-fit: cover;
