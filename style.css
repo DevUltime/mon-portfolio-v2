@@ -247,6 +247,9 @@ main {
   );
   animation: shine 5s infinite;
 }
+.homepage__btn:hover::after{
+  animation: none;
+}
 
 @keyframes shine {
   0% { left: -75%; }
