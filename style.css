@@ -24,7 +24,7 @@
 
   /*bordures*/
   --border-default: 1px solid var(--color-blue-50);
-  --dorder-strong: 1.5 px solid var(--color-blue-400);
+  --dorder-strong: 1.5px solid var(--color-blue-400);
 
   /*polices et taille de la police*/
   --font-family: "Poppins", "Roboto", sans-serif;
@@ -39,7 +39,7 @@
   --border-radius-lg: 7px;
 
   /*ombre des elements au survol*/
-  --box-shadow-hover: 0 4px 4 px
+  --box-shadow-hover: 0 4px 4px
     color-mix(in srgb, var(--color-blue-400) 30%, transparent);
 
   /*espacement: padding & margin*/
@@ -266,8 +266,6 @@ main {
   }
 }
 .homepage__card {
-  animation: name duration timing-function delay iteration-count direction
-    fill-mode;
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
