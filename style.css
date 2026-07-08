@@ -24,7 +24,7 @@
 
   /*bordures*/
   --border-default: 1px solid var(--color-blue-50);
-  --dorder-strong: 1.5 px solid var(--color-blue-400);
+  --border-strong: 1.5px solid var(--color-blue-400);
 
   /*polices et taille de la police*/
   --font-family: "Poppins", "Roboto", sans-serif;
