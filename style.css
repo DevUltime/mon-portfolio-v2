@@ -39,7 +39,8 @@
   --border-radius-lg: 7px;
 
   /*ombre des elements au survol*/
-  --box-shadow-hover: 0 4px 4 px color-mix(in srgb, var(--color-blue-400) 30%, transparent) ;
+  --box-shadow-hover: 0 4px 4 px
+    color-mix(in srgb, var(--color-blue-400) 30%, transparent);
 
   /*espacement: padding & margin*/
   --space-unit: 0.5rem;
@@ -61,7 +62,7 @@ body {
     "header"
     "main"
     "footer";
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 header {
@@ -195,14 +196,14 @@ main {
   font-size: var(--font-size-lg);
   line-height: 0.9;
 }
-.homepage__text span{
+.homepage__text span {
   color: var(--color-text-inverse);
   font-weight: bold;
 }
-.homepage__btns a{
+.homepage__btns a {
   text-decoration: none;
 }
-.homepage__btn{
+.homepage__btn {
   position: relative;
   padding: var(--space-1);
   background-color: transparent;
@@ -211,10 +212,12 @@ main {
   display: flex;
   align-items: center;
   gap: var(--space-1);
-  overflow: hidden; 
+  overflow: hidden;
+  width: fit-content;
+  font-size: var(--font-size-xs);
 }
-.homepage__btn::before{
-  content: '';
+.homepage__btn::before {
+  content: "";
   position: absolute;
   top: 0;
   left: -5%;
@@ -222,10 +225,10 @@ main {
   height: 100%;
   background-color: var(--color-blue-50);
   z-index: -1;
-  transition: width .2s ease-out;
+  transition: width 0.2s ease-out;
   transform: skew(15deg);
 }
-.homepage__btn:hover::before{
+.homepage__btn:hover::before {
   width: 110%;
 }
 /*animation du button de la homepage*/
@@ -240,24 +243,31 @@ main {
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(255,255,255,0.2) 0%,
-    rgba(255,255,255,0.3) 50%,
-    rgba(255,255,255,0.2) 100%,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.2) 100%,
     transparent
   );
   animation: shine 5s infinite;
 }
-.homepage__btn:hover::after{
+.homepage__btn:hover::after {
   animation: none;
 }
 
 @keyframes shine {
-  0% { left: -75%; }
-  30%{ left: 125%}
-  100% { left: 125%; }
+  0% {
+    left: -75%;
+  }
+  30% {
+    left: 125%;
+  }
+  100% {
+    left: 125%;
+  }
 }
 .homepage__card {
-  animation: name duration timing-function delay iteration-count direction fill-mode;
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
@@ -287,7 +297,7 @@ main {
   color: var(--color-text);
   font-size: var(--font-size-md);
 }
-.my-projects{
+.my-projects {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
@@ -314,15 +324,15 @@ main {
   padding-bottom: var(--space-1);
   background-color: color-mix(in srgb, var(--color-blue-50) 15%, transparent);
   transform: translateY(0);
-  transition: transform .2s ease-out;
+  transition: transform 0.2s ease-out;
   backdrop-filter: blur(50px);
 }
-.my-projects__card:hover{
+.my-projects__card:hover {
   box-shadow: var(--box-shadow-hover);
   transform: translateY(-3px);
 }
-.my-projects__card::before{
-  content: '01';
+.my-projects__card::before {
+  content: "01";
   position: absolute;
   top: 0;
   left: 0;
@@ -335,27 +345,27 @@ main {
   align-items: center;
   color: var(--color-text);
 }
-.my-projects__card:nth-child(2)::before{
+.my-projects__card:nth-child(2)::before {
   content: "02";
 }
-.my-projects__card:nth-child(3)::before{
+.my-projects__card:nth-child(3)::before {
   content: "03";
 }
-.card__image{
+.card__image {
   height: 200px;
   width: 100%;
   border-radius: var(--border-radius-xs);
 }
-.card__image img{
+.card__image img {
   border-radius: var(--border-radius-xs);
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.card__title{
+.card__title {
   color: var(--color-text-inverse);
 }
-.card__action{
+.card__action {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -364,16 +374,16 @@ main {
   border: var(--border-default);
   font-size: var(--font-size-xs);
   gap: calc(var(--space-1) / 2);
-  transition: background-color .2s ease-in;
+  transition: background-color 0.2s ease-in;
 }
-.card__action:hover{
+.card__action:hover {
   background-color: var(--color-blue-50);
 }
-.card__action:hover span{
+.card__action:hover span {
   transform: translateX(4px);
 }
-.card__action span{
-  transition: transform .2s ease-out;
+.card__action span {
+  transition: transform 0.2s ease-out;
   transform: translateX(0);
   font-size: 1.1rem;
 }
