@@ -28,7 +28,7 @@
 
   /*polices et taille de la police*/
   --font-family: "Poppins", "Roboto", sans-serif;
-  --font-size-xs: clamp(0.7rem, 1vh + 0.2rem, 1rem);
+  --font-size-xs: clamp(0.7rem, 1vh + 0.3rem, 1rem);
   --font-size-md: clamp(1rem, 2vw + 1rem, 2rem);
   --font-size-lg: clamp(3rem, 10vw + 2rem, 5rem);
   --text-size: 0.8rem;
@@ -39,7 +39,7 @@
   --border-radius-lg: 7px;
 
   /*ombre des elements au survol*/
-  --box-shadow-hover: 0 0 2px 4px rgba(var(--color-blue-400), 0.3);
+  --box-shadow-hover: 0 4px 4 px color-mix(in srgb, var(--color-blue-400) 30%, transparent) ;
 
   /*espacement: padding & margin*/
   --space-unit: 0.5rem;
@@ -76,6 +76,7 @@ header {
   grid-area: "header";
   justify-content: space-between;
   background-color: var(--bg-color);
+  z-index: 1;
 }
 .nav-bar {
   display: none;
@@ -176,11 +177,6 @@ main {
   align-items: center;
   padding: 0 var(--space-3);
   min-height: calc(100vh - var(--space-8));
-  background-image: linear-gradient(360deg,var(--bg-color), color-mix(in srgb, var(--bg-color) 90%, transparent)),
-  url(jdev.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
 }
 .homepage__image {
   display: none;
@@ -199,7 +195,66 @@ main {
   font-size: var(--font-size-lg);
   line-height: 0.9;
 }
+.homepage__text span{
+  color: var(--color-text-inverse);
+  font-weight: bold;
+}
+.homepage__btns a{
+  text-decoration: none;
+}
+.homepage__btn{
+  position: relative;
+  padding: var(--space-1);
+  background-color: transparent;
+  color: var(--color-text);
+  border: var(--border-default);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  overflow: hidden; 
+}
+.homepage__btn::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -5%;
+  width: 0;
+  height: 100%;
+  background-color: var(--color-blue-50);
+  z-index: -1;
+  transition: width .2s ease-out;
+  transform: skew(15deg);
+}
+.homepage__btn:hover::before{
+  width: 110%;
+}
+/*animation du button de la homepage*/
+.homepage__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 20%;
+  transform: skew(35deg);
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.2) 0%,
+    rgba(255,255,255,0.3) 50%,
+    rgba(255,255,255,0.2) 100%,
+    transparent
+  );
+  animation: shine 5s infinite;
+}
+
+@keyframes shine {
+  0% { left: -75%; }
+  30%{ left: 125%}
+  100% { left: 125%; }
+}
 .homepage__card {
+  animation: name duration timing-function delay iteration-count direction fill-mode;
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
@@ -217,7 +272,6 @@ main {
   color: var(--color-text-inverse);
 }
 .homepage__stats div p {
-  font-size: var(--font-size-xs);
   text-transform: capitalize;
 }
 .homepage__stats div {
@@ -247,6 +301,7 @@ main {
 .my-projects__card {
   display: flex;
   flex-direction: column;
+  position: relative;
   align-items: center;
   min-height: var(--space-20);
   width: 100%;
@@ -255,8 +310,33 @@ main {
   gap: var(--space-1);
   padding-bottom: var(--space-1);
   background-color: color-mix(in srgb, var(--color-blue-50) 15%, transparent);
+  transform: translateY(0);
+  transition: transform .2s ease-out;
   backdrop-filter: blur(50px);
-  z-index: -1;
+}
+.my-projects__card:hover{
+  box-shadow: var(--box-shadow-hover);
+  transform: translateY(-3px);
+}
+.my-projects__card::before{
+  content: '01';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  width: 2rem;
+  border-top-left-radius: var(--border-radius-xs);
+  background-color: var(--color-blue-50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text);
+}
+.my-projects__card:nth-child(2)::before{
+  content: "02";
+}
+.my-projects__card:nth-child(3)::before{
+  content: "03";
 }
 .card__image{
   height: 200px;
@@ -280,9 +360,18 @@ main {
   padding: var(--space-1);
   border: var(--border-default);
   font-size: var(--font-size-xs);
-  gap: var(--space-1);
+  gap: calc(var(--space-1) / 2);
+  transition: background-color .2s ease-in;
+}
+.card__action:hover{
+  background-color: var(--color-blue-50);
+}
+.card__action:hover span{
+  transform: translateX(4px);
 }
 .card__action span{
+  transition: transform .2s ease-out;
+  transform: translateX(0);
   font-size: 1.1rem;
 }
 footer {
