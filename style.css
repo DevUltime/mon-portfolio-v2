@@ -31,7 +31,7 @@
   --font-size-xs: clamp(0.7rem, 1vh + 0.3rem, 1rem);
   --font-size-md: clamp(1rem, 1vw + 0.5rem, 2rem);
   --font-size-lg: clamp(3rem, 10vw + 2rem, 5rem);
-  --text-size: 0.8rem;
+  --text-size: 0.7rem;
 
   /*rayon de la bordure*/
   --border-radius-xs: 3px;
@@ -178,6 +178,11 @@ main {
   align-items: center;
   padding: 0 var(--space-3);
   min-height: calc(100vh - var(--space-8));
+  background-image: 
+  linear-gradient(0deg, color-mix(in srgb, var(--bg-color) 90%,transparent) 90%, transparent),url(code.png);
+  background-repeat: no-repeat;
+  background-position: 50vw 0;
+  background-size: contain;
 }
 .homepage__image {
   display: none;
@@ -406,6 +411,173 @@ main {
   transform: translateX(0);
   font-size: 1.1rem;
 }
+.skills{
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-2);
+  width: 100%;
+}
+.skills__title{
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+}
+.skills__text{
+  color: var(--color-text);
+  font-size: var(--text-size);
+  text-align: center;
+}
+.technologies{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--font-size-md);
+}
+.technologies__title{
+  font-size: var(--text-size);
+  color: var(--color-text);
+}
+.technologies__group{
+  display: flex;
+  gap: var(--space-2);
+}
+.technologies__card{
+  border: var(--border-default);
+  border-radius: var(--border-radius-md);
+  width: fit-content;
+  padding: var(--space-1);
+  background: linear-gradient(0deg, color-mix(in srgb,var(--color-blue-50) 30%,transparent),transparent);
+  transition: border .2s ease-out;
+}
+.technologies__card:hover{
+  border: var(--border-strong);
+}
+.technologies__card:hover .technologies__card--img{
+  transform: rotate(7deg) scale(1.09);
+}
+.technologies__card--text{
+  color: var(--color-text);
+  font-size: var(--text-size);
+}
+.technologies__card--img{
+  transition: transform .2s ease-out;
+  transform: rotate(0deg);
+  position: relative;
+}
+.tools{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tools__title{
+  font-size: var(--text-size);
+  color: var(--color-text);
+}
+.tools__icons{
+  display: flex;
+  gap: var(--space-2);
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-2);
+  width: 100%;
+}
+.you-project{
+  width: 100%;
+  border: var(--border-strong);
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-1);
+  align-items: center;
+  color: var(--color-text);
+  text-align: center;
+  border-radius: var(--border-radius-lg);
+  min-height: 250px;
+  justify-content: space-around;
+  gap: var(--space-1);
+}
+.you-project__title{
+  font-size: var(--font-size-md);
+}
+.you-project__text{
+  font-size: var(--text-size);
+}
+.you-project__action{
+  padding: var(--space-1);
+  background-color: transparent;
+  color: var(--color-text-inverse);
+  border-radius: 100px;
+  border: var(--border-default);
+  display: flex;
+  gap: var(--space-1);
+  transform: translateY(0);
+  transition: transform .2s ease-out;
+}
+.you-project__action:hover{
+  box-shadow: var(--box-shadow-hover);
+  transform: translateY(-2px);
+}
+.about-me__title{
+  color: var(--color-text-inverse);
+}
+.about-me__text{
+  color: var(--color-text);
+  font-size: var(--text-size);
+}
+.networks{
+  display: flex;
+  gap: var(--space-1);
+}
+.networks img{
+  transform: scale(1);
+  transition: transform .2s ease-out;
+}
+.networks img:hover{
+  transform: scale(1.09);
+}
+.informations{
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.informations__title{
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+}
+.informations a{
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: var(--text-size);
+}
+.informations div{
+  display: flex;
+  gap: var(--space-1);
+}
+
+
+
+
 footer {
   grid-area: "footer";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-text);
+}
+footer p{
+  font-size: var(--text-size);
+}
+.legacy{
+  display: flex;
+  gap: var(--space-1);
+}
+.legacy a{
+  font-size: var(--text-size);
+  color: var(--color-text);
+}
+.legacy a:hover{
+  color: var(--color-text-inverse);
 }
