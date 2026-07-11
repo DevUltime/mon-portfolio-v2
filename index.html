@@ -28,6 +28,13 @@
         <span class="fst-bar"></span>
         <span class="lst-bar"></span>
       </div>
+      <div class="dark">
+        <span class="material-symbols-outlined">dark_mode</span>
+      <div class="dark-mode">
+        <div class="dark-mode__btn"></div>
+      </div>
+      <span class="material-symbols-outlined">light_mode</span>
+    </div>
     </header>
 
     <main>
@@ -44,18 +51,17 @@
               <span class="material-symbols-outlined">download</span>
               Télécharger mon cv
             </a>
-            <a class="btn homepage__btn" href="https://wa.me/237683431340" target="_blank"
-              ><img src="icon-whatsapp.svg" width="15px" alt="icon whatsApp" /> Discuter sur
-              whatsApp</a
+            <a
+              class="btn homepage__btn"
+              href="https://wa.me/237683431340"
+              target="_blank"
+              ><img src="icon-whatsapp.svg" width="15px" alt="icon whatsApp" />
+              Discuter sur whatsApp</a
             >
           </div>
         </div>
         <div class="homepage__image">
-          <img
-            src="jdev-image.png"
-            class="image logo__image"
-            alt="photo de jordan dev"
-          />
+  
         </div>
         <div class="homepage__stats">
           <div>
@@ -202,10 +208,19 @@
           </h3>
           <p class="you-project__text">
             Discutons de votre idee. Transformons ensemble votre vision en
-            realite
+            realite. cliques sur ce boutton pour me contacter maintenant
           </p>
-          <a class="you-project__action" href="https://wa.me/237683431340" target="_blank">
-            <img src="icon-whatsapp.png" width="15px" height="15px" alt="icon whatsApp" />
+          <a
+            class="you-project__action"
+            href="https://wa.me/237683431340"
+            target="_blank"
+          >
+            <img
+              src="icon-whatsapp.png"
+              width="15px"
+              height="15px"
+              alt="icon whatsApp"
+            />
             Discuter sur whastsApp
           </a>
         </div>
@@ -216,24 +231,24 @@
             qui convertissent. Votre partenaire pour une présence en ligne qui
             vous démarque.
           </p>
-        </div>
-        <div class="networks">
-          <a
-            href="https://www.linkedin.com/in/jordan-tiobou-kem-9622123b5?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-            target="_blank"
-            ><img src="icon-linkedin.png" width="25px" alt=""
-          /></a>
-          <a
-            href="https://www.facebook.com/profile.php?id=61584257999516"
-            target="_blank"
-            ><img src="icon-facebook.png" width="25px" alt=""
-          /></a>
-          <a href="https://wa.me/237683431340" target="_blank"
-            ><img src="icon-whatsapp.png" width="25px" alt=""
-          /></a>
-          <a href="https://github.com/DevUltime/" target="_blank"
-            ><img src="icon-github.png" width="25px" alt=""
-          /></a>
+          <div class="networks">
+            <a
+              href="https://www.linkedin.com/in/jordan-tiobou-kem-9622123b5"
+              target="_blank"
+              ><img src="icon-linkedin.png" width="25px" alt=""
+            /></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61584257999516"
+              target="_blank"
+              ><img src="icon-facebook.png" width="25px" alt=""
+            /></a>
+            <a href="https://wa.me/237683431340" target="_blank"
+              ><img src="icon-whatsapp.png" width="25px" alt=""
+            /></a>
+            <a href="https://github.com/DevUltime/" target="_blank"
+              ><img src="icon-github.png" width="25px" alt=""
+            /></a>
+          </div>
         </div>
 
         <div class="informations">
@@ -251,7 +266,7 @@
         </div>
       </section>
     </main>
-
+    <aside><p>JordanDev</p></aside>
     <footer>
       <p>&copy; 2026 Jordan. Tous droits réservés.</p>
       <div class="legacy">
@@ -264,7 +279,13 @@
       let menuHamburger = document.querySelector(".menu-hamburger"),
         fstBar = document.querySelector(".fst-bar"),
         lstBar = document.querySelector(".lst-bar"),
-        active = document.querySelector(".nav-bar");
+        active = document.querySelector(".nav-bar"),
+        darkMode = document.querySelector(".dark-mode"),
+        darkModeBtn = document.querySelector(".dark-mode__btn");
+        darkMode.addEventListener("click", () =>{
+          document.body.classList.toggle("dark-mode__switch")
+          darkModeBtn.classList.toggle("darkModeBtn")
+        })
       menuHamburger.addEventListener("click", () => {
         fstBar.classList.toggle("fstBar");
         lstBar.classList.toggle("lstBar");
