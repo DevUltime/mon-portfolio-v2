@@ -301,6 +301,9 @@
       if(body.classList.contains("dark-mode__switch")){
         localStorage.setItem("theme", "dark")
       }
+      else{
+        localStorage.removeItem("theme")
+      }
     </script>
   </body>
 </html>
