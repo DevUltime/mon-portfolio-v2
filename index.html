@@ -18,7 +18,7 @@
       </div>
       <nav class="nav-bar">
         <ul>
-          <li><a href="#">Acceuil</a></li>
+          <li><a href="#" aria-current="page">Accueil</a></li>
           <li><a href="#">Mes projets</a></li>
           <li><a href="#">Mes outils</a></li>
           <li><a href="#">Contact</a></li>
@@ -38,13 +38,13 @@
     </header>
 
     <main>
-      <section class="homepage">
+      <section  id="home" class="homepage">
         <div class="homepage__card">
           <h1 class="homepage__title">dev<br />web</h1>
           <p class="homepage__text">
             Salut! Moi c'est <span rel="author">Jordan Dev</span> étudiant à
             l'université de Dschang, niveau 1 en informatique. Je suis
-            specialisé dans le développement web et le design graphique.
+            spécialisé dans le développement web et le design graphique.
           </p>
           <div class="homepage__btns">
             <a href="CV_Jdev.pdf" class="btn homepage__btn" download>
@@ -95,15 +95,15 @@
             </div>
             <h3 class="card__title">Site web TalentHub</h3>
             <p class="card__text">
-              TalentHub une application web qui permet aux freelancers africans
-              de trouvers facilemnt les clients
+              TalentHub une application web qui permet aux freelancers africains
+              de trouver facilement les clients
             </p>
             <hr class="card__line" />
             <a
               class="card__action"
               href="https://github.com/DevUltime/Page_Acceuil_TalentHub.git"
               target="_blank"
-              >Decouvrir <span class="material-symbols-outlined">east</span></a
+              >Découvrir <span class="material-symbols-outlined">east</span></a
             >
           </div>
           <div class="my-projects__card my-projects__card--elt2">
@@ -115,25 +115,25 @@
             </div>
             <h3 class="card__title">Application calcul IMC</h3>
             <p class="card__text">
-              Une application qui de permet de calculer instantanement ton IMC
+              Une application qui de permet de calculer instantanément ton IMC
               (indice de masse corporel) et te propose des solutions efficaces
-              en fonction de ton resulat
+              en fonction de ton résultat
             </p>
             <hr class="card__line" />
             <a class="card__action" href="#"
-              >Decouvrir <span class="material-symbols-outlined">east</span></a
+              >Découvrir <span class="material-symbols-outlined">east</span></a
             >
           </div>
           <div class="my-projects__card my-projects__card--elt3">
             <div class="card__image">
               <img
                 src="formation.png"
-                alt="flyer de ls formation en developpement web"
+                alt="flyer de ls formation en développement web"
               />
             </div>
             <h3 class="card__title">Formation en dev web</h3>
             <p class="card__text">
-              une formation quasi complete consue sur la base des realites
+              une formation quasi complete conçue sur la base des réalités
               actuelles (l'IA). rassure-toi Je ne vais pas te donner dans cette
               formation une liste de propriétés à mémoriser. Je vais te donner
               la façon de PENSER le code.
@@ -143,17 +143,17 @@
               class="card__action"
               href="https://jordandev.mychariow.shop/prd_i6rr8v"
               target="_blank"
-              >Decouvrir <span class="material-symbols-outlined">east</span></a
+              >Découvrir <span class="material-symbols-outlined">east</span></a
             >
           </div>
         </div>
       </section>
 
       <section class="skills">
-        <h2 class="skills__title">Competences</h2>
+        <h2 class="skills__title">Compétences</h2>
         <p class="skills__text">
-          Je maitraise un ensemble de technologies et d'outils pour repondre
-          parfaitement a vos besoins
+          Je maîtrise un ensemble de technologies et d'outils pour répondre
+          parfaitement à vos besoins
         </p>
         <div class="technologies">
           <h3 class="technologies__title">Technologies</h3>
@@ -165,7 +165,7 @@
                 alt="icon html"
               />
               <p class="technologies__card--text">
-                Le html pour la struture des pages
+                Le html pour la structure des pages
               </p>
             </div>
             <div class="technologies__card">
@@ -203,12 +203,12 @@
       <section class="contact">
         <div class="you-project">
           <h3 class="you-project__title">
-            votre idee merite d'exister. <br />
+            votre idée mérite d'exister. <br />
             <span>Parlons-en</span>
           </h3>
           <p class="you-project__text">
-            Discutons de votre idee. Transformons ensemble votre vision en
-            realite. cliques sur ce boutton pour me contacter maintenant
+            Discutons de votre idée. Transformons ensemble votre vision en
+            réalité. cliques sur ce bouton pour me contacter maintenant
           </p>
           <a
             class="you-project__action"
@@ -221,7 +221,7 @@
               height="15px"
               alt="icon whatsApp"
             />
-            Discuter sur whastsApp
+            Discuter sur whatsApp
           </a>
         </div>
         <div class="about-me">
@@ -266,12 +266,15 @@
         </div>
       </section>
     </main>
-    <aside><p>JordanDev</p></aside>
+    <aside>
+      <p aria-hidden="true">JordanDev</p>
+      <a class="back-to-top" href="#home"><span class="material-symbols-outlined">arrow_upward</span></a>
+    </aside>
     <footer>
       <p>&copy; 2026 Jordan. Tous droits réservés.</p>
       <div class="legacy">
-        <a href="#">confidentialites</a>
-        <a href="#">mentions legales</a>
+        <a href="#">confidentialités</a>
+        <a href="#">mentions légales</a>
       </div>
     </footer>
 
@@ -291,6 +294,13 @@
         lstBar.classList.toggle("lstBar");
         active.classList.toggle("active");
       });
+      if(currentTheme = localStorage.getItem("theme")){
+        document.body.classList.add("dark-mode__switch")
+        darkModeBtn.classList.add("darkModeBtn")
+      }
+      if(body.classList.contains("dark-mode__switch")){
+        localStorage.setItem("theme", "dark")
+      }
     </script>
   </body>
 </html>
