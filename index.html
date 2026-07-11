@@ -294,11 +294,8 @@
         lstBar.classList.toggle("lstBar");
         active.classList.toggle("active");
       });
-      if(currentTheme = localStorage.getItem("theme")){
-        document.body.classList.add("dark-mode__switch")
-        darkModeBtn.classList.add("darkModeBtn")
-      }
-      if(body.classList.contains("dark-mode__switch")){
+      
+      if(document.body.classList.contains("dark-mode__switch")){
         localStorage.setItem("theme", "dark")
       }
       else{
