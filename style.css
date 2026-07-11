@@ -836,11 +836,4 @@ aside p {
   }
 }
 
-@media screen and (prefers-color-scheme: dark) {
-  .dark-mode__switch {
-    --bg-color: var(--color-blue-800);
-    --color-text: var(--color-gris-50);
-  }
-
-}
 
