@@ -18,10 +18,10 @@
       </div>
       <nav class="nav-bar">
         <ul>
-          <li><a href="#" aria-current="page">Accueil</a></li>
-          <li><a href="#">Mes projets</a></li>
-          <li><a href="#">Mes outils</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#home" aria-current="page">Accueil</a></li>
+          <li><a href="#my-projects">Mes projets</a></li>
+          <li><a href="#tools">Mes outils</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <div class="menu-hamburger">
@@ -29,11 +29,11 @@
         <span class="lst-bar"></span>
       </div>
       <div class="dark">
-        <span class="material-symbols-outlined">dark_mode</span>
+        <span class="material-symbols-outlined" aria-hidden="true">dark_mode</span>
       <div class="dark-mode">
         <div class="dark-mode__btn"></div>
       </div>
-      <span class="material-symbols-outlined">light_mode</span>
+      <span class="material-symbols-outlined" aria-hidden="true">light_mode</span>
     </div>
     </header>
 
@@ -48,7 +48,7 @@
           </p>
           <div class="homepage__btns">
             <a href="CV_Jdev.pdf" class="btn homepage__btn" download>
-              <span class="material-symbols-outlined">download</span>
+              <span class="material-symbols-outlined" aria-hidden="true">download</span>
               Télécharger mon cv
             </a>
             <a
@@ -65,33 +65,33 @@
         </div>
         <div class="homepage__stats">
           <div>
-            <span class="material-symbols-outlined">folder_open</span>
+            <span class="material-symbols-outlined" aria-hidden="true">folder_open</span>
             <p>projets</p>
             <span>8+</span>
           </div>
           <div>
-            <span class="material-symbols-outlined">group</span>
+            <span class="material-symbols-outlined" aria-hidden="true">group</span>
             <p>clients</p>
             <span>5+</span>
           </div>
           <div>
-            <span class="material-symbols-outlined">sentiment_satisfied</span>
+            <span class="material-symbols-outlined" aria-hidden="true">sentiment_satisfied</span>
             <p>satisfaction</p>
             <span>8.9</span>
           </div>
           <div>
-            <span class="material-symbols-outlined">diversity_2</span>
+            <span class="material-symbols-outlined" aria-hidden="true">diversity_2</span>
             <p>team</p>
             <span>3+</span>
           </div>
         </div>
       </section>
-      <section class="my-projects">
+      <section class="my-projects" id="my-projects">
         <h2 class="my-projects__title">Mes projets</h2>
         <div class="my-projects__group">
           <div class="my-projects__card my-projects__card--elt1">
             <div class="card__image">
-              <img src="pageTalentHub.jpeg" alt="image site web talenthub" />
+              <img src="pageTalentHub.jpeg"  alt="image site web talenthub" />
             </div>
             <h3 class="card__title">Site web TalentHub</h3>
             <p class="card__text">
@@ -103,7 +103,7 @@
               class="card__action"
               href="https://github.com/DevUltime/Page_Acceuil_TalentHub.git"
               target="_blank"
-              >Découvrir <span class="material-symbols-outlined">east</span></a
+              >Découvrir <span class="material-symbols-outlined" aria-hidden="true">east</span></a
             >
           </div>
           <div class="my-projects__card my-projects__card--elt2">
@@ -121,7 +121,7 @@
             </p>
             <hr class="card__line" />
             <a class="card__action" href="#"
-              >Découvrir <span class="material-symbols-outlined">east</span></a
+              >Découvrir <span class="material-symbols-outlined" aria-hidden="true">east</span></a
             >
           </div>
           <div class="my-projects__card my-projects__card--elt3">
@@ -143,13 +143,13 @@
               class="card__action"
               href="https://jordandev.mychariow.shop/prd_i6rr8v"
               target="_blank"
-              >Découvrir <span class="material-symbols-outlined">east</span></a
+              >Découvrir <span class="material-symbols-outlined" aria-hidden="true">east</span></a
             >
           </div>
         </div>
       </section>
 
-      <section class="skills">
+      <section class="skills" id="tools">
         <h2 class="skills__title">Compétences</h2>
         <p class="skills__text">
           Je maîtrise un ensemble de technologies et d'outils pour répondre
@@ -192,15 +192,15 @@
           <h3 class="tools__title">Outils</h3>
           <div class="tools__group">
             <div class="tools__icons">
-              <img src="icon-github.svg" alt="icon github" />
-              <img src="icon-git.svg" alt="icon git" />
-              <img src="icon-adobe-photoshop.svg" alt="icon photoshop" />
-              <img src="icon-adobe-illustrator.svg" alt="icon illustrator" />
+              <img src="icon-github.svg" alt="icon github" width="50px"/>
+              <img src="icon-git.svg" alt="icon git" width="50px"/>
+              <img src="icon-adobe-photoshop.svg" alt="icon photoshop" width="40px"/>
+              <img src="icon-adobe-illustrator.svg" alt="icon illustrator" width="40px"/>
             </div>
           </div>
         </div>
       </section>
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="you-project">
           <h3 class="you-project__title">
             votre idée mérite d'exister. <br />
@@ -216,7 +216,7 @@
             target="_blank"
           >
             <img
-              src="icon-whatsapp.png"
+              src="icon-whatsapp.svg"
               width="15px"
               height="15px"
               alt="icon whatsApp"
@@ -235,32 +235,32 @@
             <a
               href="https://www.linkedin.com/in/jordan-tiobou-kem-9622123b5"
               target="_blank"
-              ><img src="icon-linkedin.png" width="25px" alt=""
-            /></a>
+              ><img src="icon-linkedin.svg" width="24px" height="24px" alt=""
+            />LinkedIn</a>
             <a
               href="https://www.facebook.com/profile.php?id=61584257999516"
               target="_blank"
-              ><img src="icon-facebook.png" width="25px" alt=""
-            /></a>
+              ><img src="icon-facebook.svg" width="24px" height="24px" alt=""
+            />Facebook</a>
             <a href="https://wa.me/237683431340" target="_blank"
-              ><img src="icon-whatsapp.png" width="25px" alt=""
-            /></a>
+              ><img src="icon-whatsapp.svg" width="24px" height="24px" alt=""
+            />WhatsApp</a>
             <a href="https://github.com/DevUltime/" target="_blank"
-              ><img src="icon-github.png" width="25px" alt=""
-            /></a>
+              ><img src="icon-github.svg" width="24px" height="24px" alt=""
+            />GitHub</a>
           </div>
         </div>
 
         <div class="informations">
           <h2 class="informations__title">Contact</h2>
           <div>
-            <img src="icon-phone.png" width="18px" alt="icon phone" /><a
+            <img src="icon-phone.svg" width="18px" alt="icon phone" /><a
               href="tel:237683431340"
               >+237 6 83 43 13 40</a
             >
           </div>
           <div>
-            <img src="icon-email.png" width="18px" alt="icon email" />
+            <img src="icon-email.svg" width="18px" alt="icon email" />
             <a href="mailto:tioboujordan5@gmail.com">tioboujordan5@gmail.com</a>
           </div>
         </div>
@@ -268,7 +268,7 @@
     </main>
     <aside>
       <p aria-hidden="true">JordanDev</p>
-      <a class="back-to-top" href="#home"><span class="material-symbols-outlined">arrow_upward</span></a>
+      <a class="back-to-top" href="#home"><span class="material-symbols-outlined" aria-hidden="true">arrow_upward</span></a>
     </aside>
     <footer>
       <p>&copy; 2026 Jordan. Tous droits réservés.</p>

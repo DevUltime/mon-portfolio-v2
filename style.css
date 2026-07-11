@@ -43,6 +43,9 @@
   --border-radius-lg: 7px;
 
   /*ombre des elements au survol*/
+  --box-shadow-default: 0 0 5px
+    color-mix(in srgb, var(--color-blue-400) 30%, transparent), 0 1px 2px
+    color-mix(in srgb, var(--color-blue-400) 30%, transparent) inset;
   --box-shadow-hover: 0 4px 4px
     color-mix(in srgb, var(--color-blue-400) 30%, transparent);
 
@@ -418,7 +421,11 @@ main {
   border-radius: var(--border-radius-xs);
   gap: var(--space-1);
   padding-bottom: var(--space-1);
-  background-color: color-mix(in srgb, var(--color-blue-50) 15%, transparent);
+  background: linear-gradient(
+    0deg,
+    color-mix(in srgb, var(--color-blue-50) 10%, transparent),
+    transparent
+  );
   transform: translateY(0);
   transition: transform 0.2s ease-out;
   backdrop-filter: blur(50px);
@@ -567,7 +574,9 @@ main {
   display: flex;
   gap: var(--space-2);
 }
-
+.tools__icons img{
+  filter: brightness(0) invert(33%) sepia(8%) saturate(6057%) hue-rotate(194deg) brightness(95%) contrast(79%);
+}
 .contact {
   display: flex;
   flex-direction: column;
@@ -578,7 +587,7 @@ main {
 .you-project {
   width: 90%;
   margin: auto;
-  border: var(--border-strong);
+  box-shadow: var(--box-shadow-default);
   display: flex;
   flex-direction: column;
   padding: var(--space-1);
@@ -604,11 +613,13 @@ main {
   display: flex;
   gap: var(--space-1);
   transform: translateY(0);
-  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, border 0.2s ease-out, color 0.2s ease-out;
   font-size: var(--text-size);
   text-decoration: none;
+  align-items: center;
 }
 .you-project__action:hover {
+  transform: translateY(-3px);
   border-radius: 100px;
   border: 1px solid #25d366;
   color: #25d366;
@@ -633,28 +644,28 @@ main {
   gap: var(--space-1);
 }
 .networks a {
+  text-decoration: none;
   transform: scale(1);
   transition: transform 0.2s ease-out;
+  width: 25px;
+  height: auto;
+  overflow: hidden;
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  gap: 2px;
+  transition: width 0.2s ease-out, transform 0.2s ease-out;
+  font-size: var(--text-size); 
 }
 .networks a:hover {
-  transform: scale(1.09);
+  transform: scale(1.1);
+  width: fit-content;
 }
-.networks a:nth-child(1):hover {
-  filter: brightness(0) invert(19%) sepia(93%) saturate(2503%)
-    hue-rotate(198deg) brightness(103%) contrast(92%);
+.networks a img{
+  object-fit: contain;
+  filter: brightness(0) invert(33%) sepia(8%) saturate(6057%) hue-rotate(194deg) brightness(95%) contrast(79%);
 }
-.networks a:nth-child(2):hover {
-  filter: brightness(0) invert(31%) sepia(97%) saturate(1824%)
-    hue-rotate(203deg) brightness(98%) contrast(94%);
-}
-.networks a:nth-child(3):hover {
-  filter: brightness(0) invert(87%) sepia(96%) saturate(6409%) hue-rotate(65deg)
-    brightness(88%) contrast(87%);
-}
-.networks a:nth-child(4):hover {
-  filter: brightness(0) invert(100%) sepia(0%) saturate(0%) hue-rotate(118deg)
-    brightness(103%) contrast(97%);
-}
+
 .informations {
   display: flex;
   flex-direction: column;
@@ -671,13 +682,15 @@ main {
   display: flex;
   gap: var(--space-1);
 }
-
+.informations img{
+  filter: brightness(0) invert(33%) sepia(8%) saturate(6057%) hue-rotate(194deg) brightness(95%) contrast(79%);
+}
 footer {
   grid-area: "footer";
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 var(--space-2);
+  padding-bottom: var(--space-2);
 }
 footer p {
   font-size: var(--text-size);
@@ -758,7 +771,22 @@ aside p {
     padding: var(--space-1);
   }
   .nav-bar ul li a {
+     padding: 1px 0;
     font-size: var(--text-size);
+    position: relative;
+  }
+  .nav-bar ul li a::before{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-text-inverse);
+    transition: width 0.2s ease-out;
+  }
+  .nav-bar ul li a:hover::before{
+    width: 100%;
   }
   .menu-hamburger {
     display: none;
@@ -836,4 +864,11 @@ aside p {
   }
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+}
 
