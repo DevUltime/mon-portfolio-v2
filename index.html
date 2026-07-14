@@ -1,10 +1,23 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
+    <meta
+      name="keywords"
+      content="Portfolio, Jordan Dev, développeur web, designer graphique, projets web, compétences en développement, contact développeur"
+    />
+    <meta name="author" content="Jordan Dev" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0a0f28" />
+    <meta property="og:title" content="Portfolio | Jordan Dev" />
+    <meta property="og:description" content="Découvrez le portfolio de Jordan Dev, un développeur web et designer graphique passionné. Explorez mes projets, compétences et contactez-moi pour vos besoins en développement web." />
+    <meta property="og:image" content="jdev-logo.svg" />
+    <link rel="preload" href="jdev-image.webp" as="image" fetchpriority="high" />
+    <link rel="preload" href="code.webp" as="image" fetchpriority="high" />
+    <meta property="og:url" content="https://jordandev.mychariow.shop" /> 
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
@@ -14,7 +27,7 @@
   <body>
     <header>
       <div class="logo">
-        <img src="jdev-logo.svg" alt="logo de jdev" />
+        <img src="jdev-logo.svg" alt="logo de jdev" height="25px" width="80px"/>
       </div>
       <nav class="nav-bar">
         <ul>
@@ -60,7 +73,7 @@
             >
           </div>
         </div>
-        <div class="homepage__image">
+        <div class="homepage__image" aria-label="image arrière-plan">
   
         </div>
         <div class="homepage__stats">
@@ -91,7 +104,15 @@
         <div class="my-projects__group">
           <div class="my-projects__card my-projects__card--elt1">
             <div class="card__image">
-              <img src="pageTalentHub.jpeg"  alt="image site web talenthub" />
+             <picture>
+              <source srcset="pageTalentHub.webp" type="image/webp" width="100%" height="100%" />
+              <img
+                src="pageTalentHub.jpeg"
+                alt="image site web TalentHub"
+                width="100%"
+                height="100%"
+              />
+             </picture>
             </div>
             <h3 class="card__title">Site web TalentHub</h3>
             <p class="card__text">
@@ -108,10 +129,15 @@
           </div>
           <div class="my-projects__card my-projects__card--elt2">
             <div class="card__image">
-              <img
-                src="imageCalculIMC.jpeg"
-                alt="image application calcul IMC"
-              />
+              <picture>
+                <source srcset="imageCalculIMC.webp" type="image/webp" width="100%" height="100%" />
+                <img
+                  src="imageCalculIMC.jpeg"
+                  alt="image application calcul IMC"
+                  width="100%"
+                  height="100%"
+                />
+              </picture>
             </div>
             <h3 class="card__title">Application calcul IMC</h3>
             <p class="card__text">
@@ -126,10 +152,15 @@
           </div>
           <div class="my-projects__card my-projects__card--elt3">
             <div class="card__image">
-              <img
-                src="formation.png"
-                alt="flyer de ls formation en développement web"
-              />
+              <picture>
+                <source srcset="formation.webp" type="image/webp" width="100%" height="100%" />
+                <img
+                  src="formation.png"
+                  alt="flyer de ls formation en développement web"
+                  width="100%"
+                  height="100%"
+                />
+              </picture>
             </div>
             <h3 class="card__title">Formation en dev web</h3>
             <p class="card__text">
@@ -268,7 +299,7 @@
     </main>
     <aside>
       <p aria-hidden="true">JordanDev</p>
-      <a class="back-to-top" href="#home"><span class="material-symbols-outlined" aria-hidden="true">arrow_upward</span></a>
+      <a class="back-to-top" href="#home" aria-label="remonter au début de la page"><span class="material-symbols-outlined" aria-hidden="true">arrow_upward</span></a>
     </aside>
     <footer>
       <p>&copy; 2026 Jordan. Tous droits réservés.</p>
