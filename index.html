@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
-    <link rel="icon" href="icon.png" type="image/x-icon" />
-    <link rel="apple-touch-icon" sizes="180x180" href="icon.png" />
+    <link rel="shortcut icon" href="icons/icon.png" type="image/x-icon" />
+    <link rel="icon" href="icons/icon.png" type="image/png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/icon.png" />
     <link rel="stylesheet" href="style.css" />
     <meta
       name="keywords"
@@ -16,13 +16,13 @@
     <meta name="theme-color" content="#0a0f28" />
     <meta property="og:title" content="Portfolio | Jordan Dev" />
     <meta property="og:description" content="Découvrez le portfolio de Jordan Dev, un développeur web et designer graphique passionné. Explorez mes projets, compétences et contactez-moi pour vos besoins en développement web." />
-    <meta property="og:image" content="jdev-logo.svg" />
-    <meta property="og:image:type" content="image/svg+xml" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image" content="logo/jdev-logo-networks.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200px" />
+    <meta property="og:image:height" content="630px" />
     <meta property="og:type" content="website" />
-    <link rel="preload" href="jdev-image.webp" as="image" fetchpriority="high" />
-    <link rel="preload" href="code.webp" as="image" fetchpriority="high" />
+    <link rel="preload" href="imgs/jdev-image.webp" as="image" fetchpriority="high" />
+    <link rel="preload" href="imgs/code.webp" as="image" fetchpriority="high" />
     <meta property="og:url" content="https://jordandev.mychariow.shop" /> 
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
@@ -33,7 +33,7 @@
   <body>
     <header>
       <div class="logo">
-        <img src="jdev-logo.svg" alt="logo de jdev" height="25px" width="80px"/>
+        <img src="logo/jdev-logo.svg" alt="logo de jdev" height="25px" width="80px"/>
       </div>
       <nav class="nav-bar">
         <ul>
@@ -66,7 +66,7 @@
             spécialisé dans le développement web et le design graphique.
           </p>
           <div class="homepage__btns">
-            <a href="CV_Jdev.pdf" class="btn homepage__btn" download>
+            <a href="docs/CV_Jdev.pdf" class="btn homepage__btn" download>
               <span class="material-symbols-outlined" aria-hidden="true">download</span>
               Télécharger mon cv
             </a>
@@ -74,7 +74,7 @@
               class="btn homepage__btn"
               href="https://wa.me/237683431340"
               target="_blank"
-              ><img src="icon-whatsapp.svg" width="15px" alt="icon whatsApp" />
+              ><img src="icons/icon-whatsapp.svg" width="15px" alt="icon whatsApp" />
               Discuter sur whatsApp</a
             >
           </div>
@@ -111,9 +111,9 @@
           <div class="my-projects__card my-projects__card--elt1">
             <div class="card__image">
              <picture>
-              <source srcset="pageTalentHub.webp" type="image/webp" width="100%" height="100%" />
+              <source srcset="imgs/pageTalentHub.webp" type="image/webp" width="100%" height="100%" />
               <img
-                src="pageTalentHub.jpeg"
+                src="imgs/pageTalentHub.jpeg"
                 alt="image site web TalentHub"
                 width="100%"
                 height="100%"
@@ -136,9 +136,9 @@
           <div class="my-projects__card my-projects__card--elt2">
             <div class="card__image">
               <picture>
-                <source srcset="imageCalculIMC.webp" type="image/webp" width="100%" height="100%" />
+                <source srcset="imgs/imageCalculIMC.webp" type="image/webp" width="100%" height="100%" />
                 <img
-                  src="imageCalculIMC.jpeg"
+                  src="imgs/imageCalculIMC.jpeg"
                   alt="image application calcul IMC"
                   width="100%"
                   height="100%"
@@ -159,9 +159,9 @@
           <div class="my-projects__card my-projects__card--elt3">
             <div class="card__image">
               <picture>
-                <source srcset="formation.webp" type="image/webp" width="100%" height="100%" />
+                <source srcset="imgs/formation.webp" type="image/webp" width="100%" height="100%" />
                 <img
-                  src="formation.png"
+                  src="imgs/formation.png"
                   alt="flyer de ls formation en développement web"
                   width="100%"
                   height="100%"
@@ -198,7 +198,7 @@
             <div class="technologies__card">
               <img
                 class="technologies__card--img"
-                src="icon-html-5.svg"
+                src="icons/icon-html-5.svg"
                 alt="icon html"
                 width="40px"
                 height="40px"
@@ -211,7 +211,7 @@
             <div class="technologies__card">
               <img
                 class="technologies__card--img"
-                src="icon-css.svg"
+                src="icons/icon-css.svg"
                 alt="icon css"
                 width="40px"
                 height="40px"
@@ -221,7 +221,7 @@
             <div class="technologies__card">
               <img
                 class="technologies__card--img"
-                src="icon-javascript.svg"
+                src="icons/icon-javascript.svg"
                 alt="icon javaScript"
                 width="40px"
                 height="40px"
@@ -236,10 +236,10 @@
           <h3 class="tools__title">Outils</h3>
           <div class="tools__group">
             <div class="tools__icons">
-              <img src="icon-github.svg" alt="icon github" width="50px" height="50px"/>
-              <img src="icon-git.svg" alt="icon git" width="50px" height="50px"/>
-              <img src="icon-adobe-photoshop.svg" alt="icon photoshop" width="40px" height="40px"/>
-              <img src="icon-adobe-illustrator.svg" alt="icon illustrator" width="40px" height="40px"/>
+              <img src="icons/icon-github.svg" alt="icon github" width="50px" height="50px"/>
+              <img src="icons/icon-git.svg" alt="icon git" width="50px" height="50px"/>
+              <img src="icons/icon-adobe-photoshop.svg" alt="icon photoshop" width="40px" height="40px"/>
+              <img src="icons/icon-adobe-illustrator.svg" alt="icon illustrator" width="40px" height="40px"/>
             </div>
           </div>
         </div>
@@ -260,7 +260,7 @@
             target="_blank"
           >
             <img
-              src="icon-whatsapp.svg"
+              src="icons/icon-whatsapp.svg"
               width="15px"
               height="15px"
               alt="icon whatsApp"
@@ -279,18 +279,18 @@
             <a
               href="https://www.linkedin.com/in/jordan-tiobou-kem-9622123b5"
               target="_blank"
-              ><img src="icon-linkedin.svg" width="24px" height="24px" alt=""
+              ><img src="icons/icon-linkedin.svg" width="24px" height="24px" alt=""
             />LinkedIn</a>
             <a
               href="https://www.facebook.com/profile.php?id=61584257999516"
               target="_blank"
-              ><img src="icon-facebook.svg" width="24px" height="24px" alt=""
+              ><img src="icons/icon-facebook.svg" width="24px" height="24px" alt=""
             />Facebook</a>
             <a href="https://wa.me/237683431340" target="_blank"
-              ><img src="icon-whatsapp.svg" width="24px" height="24px" alt=""
+              ><img src="icons/icon-whatsapp.svg" width="24px" height="24px" alt=""
             />WhatsApp</a>
             <a href="https://github.com/DevUltime/" target="_blank"
-              ><img src="icon-github.svg" width="24px" height="24px" alt=""
+              ><img src="icons/icon-github.svg" width="24px" height="24px" alt=""
             />GitHub</a>
           </div>
         </div>
@@ -298,13 +298,13 @@
         <div class="informations">
           <h2 class="informations__title">Contact</h2>
           <div>
-            <img src="icon-phone.svg" width="18px" height="18px" alt="icon phone" /><a
+            <img src="icons/icon-phone.svg" width="18px" height="18px" alt="icon phone" /><a
               href="tel:237683431340"
               >+237 6 83 43 13 40</a
             >
           </div>
           <div>
-            <img src="icon-email.svg" width="18px" height="18px" alt="icon email" />
+            <img src="icons/icon-email.svg" width="18px" height="18px" alt="icon email" />
             <a href="mailto:tioboujordan5@gmail.com">tioboujordan5@gmail.com</a>
           </div>
         </div>
@@ -322,7 +322,7 @@
       </div>
     </footer>
 
-    <script>
+    <script type="module">
       let menuHamburger = document.querySelector(".menu-hamburger"),
         fstBar = document.querySelector(".fst-bar"),
         lstBar = document.querySelector(".lst-bar"),

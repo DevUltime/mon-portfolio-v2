@@ -247,7 +247,7 @@ main {
       color-mix(in srgb, var(--bg-color) 90%, transparent) 90%,
       transparent
     ),
-    url(code.webp);
+    url(imgs/code.webp);
   background-repeat: no-repeat;
   background-position: 50vw 0;
   background-size: contain;
@@ -708,12 +708,19 @@ aside {
   position: relative;
   grid-area: aside;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 aside p {
+  display: flex;
+  flex-wrap: wrap;
   color: transparent;
   text-align: center;
   font-weight: 900;
   font-family: var(--font-heading);
+
   font-size: var(--font-size-lg);
   background: linear-gradient(
     0deg,
@@ -821,7 +828,7 @@ aside p {
         var(--bg-color) 10%,
         color-mix(in srgb, var(--bg-color) 40%, transparent)
       ),
-      url(jdev-image.webp);
+      url(imgs/jdev-image.webp);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -863,7 +870,9 @@ aside p {
     gap: var(--space-4);
   }
 }
-
+aside p{
+  font-size: 14vw;
+}
 @media screen and (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
